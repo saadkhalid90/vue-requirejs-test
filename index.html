@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart">Cart({{ cart.length }})</div>
+      <product-display
+        :premium="premium"
+        @add-to-cart="updateCart"
+      ></product-display>
+    </div>
+    <!-- just one script main.js - pointing to the main require module, Vue and all other dependencies will be imported in main.js -->
+    <script data-main="./main.js" src="./require.js"></script>
+  </body>
+</html>
